@@ -9,18 +9,23 @@
 import pyautogui
 import time
 
-pyautogui.PAUSE = 1 # tempo de pausa entre cada comando 
+pyautogui.PAUSE = 2 # tempo de pausa entre cada comando 
 # Passo 1
 
 pyautogui.press('win')
 pyautogui.write('whatsapp')
 pyautogui.press('enter')
 # Passo 2
-time.sleep(5) # dar tempo para o whatsapp abrir
+time.sleep(3) # dar tempo para o whatsapp abrir
 pyautogui.click(x=258, y=253) # clicar no primeiro contato da lista
 time.sleep(2) # dar tempo para o contato abrir
 # Passo 3
 pyautogui.click(x=863, y=977) # clicar na caixa de texto
 pyautogui.write('Bom dia!')
 pyautogui.press('enter')
+pyautogui.write('Um instante, estou enviando esta mensagem automaticamente usando PyAutoGUI!')
+pyautogui.press('enter')
+pyautogui.write('Tenha um ótimo dia!')
+pyautogui.press('enter')
+pyautogui.hotkey('alt', 'f4') # fechar o whatsapp
 
